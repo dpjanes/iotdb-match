@@ -1,0 +1,30 @@
+#
+#   one-string-1.yaml
+#
+#   David Janes
+#   IOTDB
+#   2017-11-18
+#
+#   Demonstrate:
+#   - finding a single item exactly
+#   - do not die if number in the place of a string
+#
+---
+name: David
+---
+- first: John
+  last: Smith
+  age: 20
+  expect: false
+- name: Fred
+  last: Dobberman
+  age: 38
+  expect: false
+- name: David
+  last: Dobberman
+  age: 8
+  expect: true
+- name: 9       ## do not fail on number
+  last: 99
+  age: 8
+  expect: false

@@ -1,0 +1,30 @@
+#
+#   one-glob-1.yaml
+#
+#   David Janes
+#   IOTDB
+#   2017-11-18
+#
+#   Demonstrate 
+#   - glob matching against a single value
+#   - do not die if number in the place of a string
+#
+---
+name: *
+---
+- first: John
+  last: Smith
+  age: 20
+  expect: true
+- name: Fred
+  last: Dobberman
+  age: 38
+  expect: true
+- name: David
+  last: Dobberman
+  age: 8
+  expect: true
+- name: 9       ## globs do not match numbers
+  last: 99
+  age: 8
+  expect: false
