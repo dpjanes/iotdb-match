@@ -22,3 +22,9 @@
 
 "use strict";
 
+const match = require("./match")
+
+/**
+ *  API
+ */
+exports.match = match.match;
