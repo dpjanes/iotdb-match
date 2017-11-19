@@ -6,7 +6,6 @@
 #   2017-11-19
 #
 
-exit 0
 PACKAGE=iotdb-match
 DIST_ROOT=/var/tmp/.dist.$$
 
@@ -35,6 +34,7 @@ echo "=================="
         README.md LICENSE \
         package.json \
         index.js \
+        match.js \
         |
     ( cd "${NPM_DST}" && tar xvf - && npm publish ) || exit 1
     git commit -m "new release" package.json || exit 1

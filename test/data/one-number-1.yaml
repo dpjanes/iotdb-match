@@ -1,0 +1,29 @@
+#
+#   one-string-1.yaml
+#
+#   David Janes
+#   IOTDB
+#   2017-11-18
+#
+#   Demonstrate:
+#   - finding a number
+#
+---
+age: 20
+---
+- first: John
+  last: Smith
+  age: 20
+  expect: true
+- first: Fred
+  last: Dobberman
+  age: 38
+  expect: false
+- first: David
+  last: Dobberman
+  age: 8
+  expect: false
+- first: 9
+  last: 99
+  age: 20
+  expect: true

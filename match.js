@@ -42,9 +42,6 @@ const match = (template, event) => {
     assert.ok(_.is.Dictionary(event), `${method}: event must be a Dictionary`);
 
     _.mapObject(template, (template_value, template_key) => {
-        assert.ok(_.is.String(template_value) || _.is.Array(template_value), 
-            `${method}: needs to be String or Array`)
-
         // run out the clock
         if (!all) {
             return;
@@ -67,9 +64,10 @@ const match = (template, event) => {
             if (template_value.indexOf(event_value) === -1) {
                 all = false;
             }
-            return;
         } else {
-            assert.ok(false, `${method}: you cannot get here`);
+            if (template_value !== event_value) {
+                all = false;
+            }
         }
     })
 
