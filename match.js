@@ -22,11 +22,11 @@
 
 "use strict";
 
-const _ = require("iotdb-helpers");
+const _ = require("iotdb-helpers")
 
-const assert = require("assert");
+const assert = require("assert")
 
-const minimatch = require("minimatch");
+const minimatch = require("minimatch")
 
 /**
  *  Possible enhancements:

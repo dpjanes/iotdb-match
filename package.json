@@ -4,7 +4,7 @@
         "url": "https://github.com/dpjanes/iotdb-match/issues"
     }, 
     "dependencies": {
-        "iotdb-helpers": "~3.3.2"
+        "iotdb-helpers": "~3.4.2"
     }, 
     "description": "match objects against templates", 
     "homepage": "https://github.com/dpjanes/node-iotdb", 
