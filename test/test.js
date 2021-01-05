@@ -44,7 +44,7 @@ describe("test", function() {
             .then(fs.all(fs.read.utf8))
             .then(_.promise.make(sd => {
                 sd.outputs.forEach(output => {
-                    const ds = yaml.safeLoadAll(output.document)
+                    const ds = yaml.loadAll(output.document)
                     assert.ok(ds.length === 2, output);
 
                     output.template = ds[0]
